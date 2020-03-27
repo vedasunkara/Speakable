@@ -73,6 +73,7 @@ public class Display extends JFrame implements ActionListener {
 
   public void setScreen() {
     panel.add(textField);
+
     panel.add(b0);
     panel.add(b1);
     panel.add(b2);
@@ -84,14 +85,14 @@ public class Display extends JFrame implements ActionListener {
     panel.add(b8);
     panel.add(b9);
 
-    panel.add(bC);
-
     panel.add(bAdd);
     panel.add(bSub);
     panel.add(bMul);
-    panel.add(bDec);
-    panel.add(bPer);
+    panel.add(bDiv);
 
+    panel.add(bDec);
+    panel.add(bC);
+    panel.add(bPer);
     panel.add(bEq);
 
     panel.setBackground(Color.PINK);
@@ -111,7 +112,7 @@ public class Display extends JFrame implements ActionListener {
   }
 
   public static void main(String[] args) {
-    Display display = new Display(20, 300, 300);
+    Display display = new Display(30, 400, 200);
 
     display.setListeners();
     display.setScreen();
