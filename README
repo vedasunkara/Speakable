@@ -1,0 +1,16 @@
+README
+
+Welcome to this calculator application!
+
+To Run:
+1. Navigate to the 'Speakable' folder
+2. Compile all files: 'javac *.java'
+3. Execute the display: 'java Display.java'
+
+Key Functionality
+1. Basic arithmetic operations.
+2. Memory of pervious calculations (one step prior).
+3. Compound equations.
+4. Simple error handling for malformatted inputs.
+
+No known bugs.
