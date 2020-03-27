@@ -36,21 +36,28 @@ public class Calculator {
   // output: (Double) the result of the stored operation
   //         0.0 if operation undefined
   public double calculateResult() {
-    if(op.equals("")) {
-      return Double.parseDouble(arg1);
-    } else if(op.equals("+")) {
-      return this.functions.add(Double.parseDouble(arg1), Double.parseDouble(arg2));
-    } else if(op.equals("-")) {
-      return this.functions.subtract(Double.parseDouble(arg1), Double.parseDouble(arg2));
-    } else if(op.equals("*")) {
-      return this.functions.multiply(Double.parseDouble(arg1), Double.parseDouble(arg2));
-    } else if(op.equals("/")) {
-      return this.functions.divide(Double.parseDouble(arg1), Double.parseDouble(arg2));
-    } else if(op.equals("%")) {
-      return this.functions.percentage(Double.parseDouble(arg1), Double.parseDouble(arg2));
-    }
+    try {
+      Double arg1_double = Double.parseDouble(arg1);
+      Double arg2_double = Double.parseDouble(arg2);
 
-    return 0.0;
+      if(op.equals("")) {
+        return arg1_double;
+      } else if(op.equals("+")) {
+        return this.functions.add(arg1_double, arg2_double);
+      } else if(op.equals("-")) {
+        return this.functions.subtract(arg1_double, arg2_double);
+      } else if(op.equals("*")) {
+        return this.functions.multiply(arg1_double, arg2_double);
+      } else if(op.equals("/")) {
+        return this.functions.divide(arg1_double, arg2_double);
+      } else if(op.equals("%")) {
+        return this.functions.percentage(arg1_double, arg2_double);
+      }
+    } catch (java.lang.NumberFormatException e) {
+      System.out.println("NUMBER FORMAT EXCEPTION");
+    } finally {
+      return 0.0;
+    }
   }
 
   // input: (String) raw input from calculator button
