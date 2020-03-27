@@ -55,9 +55,9 @@ public class Calculator {
       }
     } catch (java.lang.NumberFormatException e) {
       System.out.println("NUMBER FORMAT EXCEPTION");
-    } finally {
-      return 0.0;
     }
+
+    return 0.0;
   }
 
   // input: (String) raw input from calculator button

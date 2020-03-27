@@ -42,6 +42,7 @@ public class Display extends JFrame implements ActionListener {
     bSub = new JButton("-");
     bMul = new JButton("*");
     bDiv = new JButton("/");
+    bPer = new JButton("%");
 
     bEq = new JButton("=");
   }
@@ -65,6 +66,7 @@ public class Display extends JFrame implements ActionListener {
     bSub.addActionListener(this);
     bMul.addActionListener(this);
     bDiv.addActionListener(this);
+    bPer.addActionListener(this);
 
     bEq.addActionListener(this);
   }
@@ -81,7 +83,6 @@ public class Display extends JFrame implements ActionListener {
     panel.add(b7);
     panel.add(b8);
     panel.add(b9);
-    panel.add(bDec);
 
     panel.add(bC);
 
@@ -89,6 +90,7 @@ public class Display extends JFrame implements ActionListener {
     panel.add(bSub);
     panel.add(bMul);
     panel.add(bDec);
+    panel.add(bPer);
 
     panel.add(bEq);
 
