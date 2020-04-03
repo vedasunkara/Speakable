@@ -1,0 +1,80 @@
+:root {
+  font-family: Helvetica, sans-serif;
+}
+
+input,
+textarea,
+button {
+  border: 0;
+  border-radius: 0;
+
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+/* container setup */
+html {
+  font-size: 200%;
+  font-weight: 300;
+}
+
+body {
+  background-color: #afc2e3;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 20em;
+}
+
+.calculator {
+  max-width: 20em;
+}
+
+/* calculator output display */
+.calculator__display {
+  background-color: #222222;
+  color: #ffffff;
+  font-size: 1.8em;
+  padding: 0.5em 0.5em;
+  text-align: right;
+}
+
+/* calculator key display */
+.calculator__keys {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.calculator__keys > * {
+  background-color: #fff;
+  padding: 0.5em 1.25em;
+  position: relative;
+  text-align: center;
+}
+
+/* button press display */
+.calculator__keys > *:active::before,
+.calculator__keys > .is-depressed::before {
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  content: "";
+  opacity: 0.5;
+  position: absolute;
+}
+
+.operator {
+  background-color: #eeeeee;
+}
+
+.equal {
+  background-color: #f58b27;
+  grid-column: 5;
+  grid-row: 2 / span 4;
+}
